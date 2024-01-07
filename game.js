@@ -32,7 +32,7 @@ function checkAnswer(currentLevel) {
         console.log("wrong");
         $("body").addClass("game-over");
         setTimeout(()=> $("body").removeClass("game-over"),200)
-        var audio=new Audio("sounds/wrong.mp3");
+        var audio=new Audio("wrong.mp3");
         audio.play();
         gameReset();
         }
@@ -55,13 +55,13 @@ function nextSequence() {
 
   $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
 
-  var audio = new Audio("sounds/" + randomChosenColour + ".mp3");
+  var audio = new Audio(randomChosenColour + ".mp3");
   audio.play();
 }
 
 
 function playSound(name){
-    var audio=new Audio("sounds/"+ name+ ".mp3");
+    var audio=new Audio(name+ ".mp3");
     audio.play();
 }
 function animatePress(currentColour){
